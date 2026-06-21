@@ -2,7 +2,7 @@ services:
   db:
     image: sivadockerz/pyrepo:dbimage
     deploy:
-      replicas: 1
+      replicas: 3
     ports:
       - 3306:3306
     networks:
@@ -10,7 +10,7 @@ services:
   auth_service:
     image: sivadockerz/pyrepo:authimage
     deploy:
-      replicas: 1
+      replicas: 3
     ports:
       - "5001:5001"
     networks:
@@ -22,7 +22,7 @@ services:
   book_service:
     image: sivadockerz/pyrepo:bookimage
     deploy:
-      replicas: 1
+      replicas: 3
     ports:
       - "5002:5002"
     networks:
@@ -33,7 +33,7 @@ services:
   borrow_service:
     image: sivadockerz/pyrepo:borrowimage
     deploy:
-      replicas: 1
+      replicas: 3
     ports:
       - "5003:5003"
     networks:
@@ -44,7 +44,7 @@ services:
   frontend:
     image: sivadockerz/pyrepo:frontend
     deploy:
-      replicas: 1
+      replicas: 3
     ports:
       - "5000:5000"
     networks:
