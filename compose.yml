@@ -7,7 +7,7 @@ services:
       - "3306:3306
     networks:
       - mynetwork
-  auth:
+  auth_service:
     image: sivadockerz/pyrepo:authimage
     deploy:
       replicas: 1
@@ -19,7 +19,7 @@ services:
       - db
     
   
-  book:
+  book_service:
     image: sivadockerz/pyrepo:bookimage
     deploy:
       replicas: 1
@@ -30,7 +30,7 @@ services:
     depends_on
       - db
 
-  borrow:
+  borrow_service:
     image: sivadockerz/pyrepo:borrowimage
     deploy:
       replicas: 1
