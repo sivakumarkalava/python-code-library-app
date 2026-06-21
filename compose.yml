@@ -15,7 +15,7 @@ services:
       - "5001:5001"
     networks:
       - mynetwork
-    depends_on
+    depends_on:
       - db
     
   
@@ -27,7 +27,7 @@ services:
       - "5002:5002"
     networks:
       - mynetwork
-    depends_on
+    depends_on:
       - db
 
   borrow_service:
@@ -38,7 +38,7 @@ services:
       - "5003:5003"
     networks:
       - mynetwork
-    depends_on
+    depends_on:
       - db
 
   frontend:
@@ -49,7 +49,7 @@ services:
       - "5000:5000"
     networks:
       - mynetwork
-    depends_on
+    depends_on:
       - auth
       - book
       - borrow
